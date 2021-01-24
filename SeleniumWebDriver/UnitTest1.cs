@@ -17,6 +17,17 @@ namespace SeleniumWebDriver
             driver.Manage().Window.Maximize();
             driver.Close();
             driver.Quit();
+            
+        }
+        public void NewFunc()
+        {
+            IWebDriver driver = new ChromeDriver();
+            const string Url = "https://google.com/";
+            driver.Navigate().GoToUrl(Url);
+            driver.Manage().Window.Maximize();
+            driver.Close();
+            driver.Quit();
+
         }
     }
 }
