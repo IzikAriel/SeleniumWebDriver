@@ -5,18 +5,31 @@ using OpenQA.Selenium.Chrome;
 
 namespace SeleniumWebDriver
 {
+
     [TestClass]
-    public class UnitTest1
+    public class MainTest
     {
+        static readonly log4net.ILog log;
         [TestMethod]
-        public void TestMethod1()
+        public void OpenWebDriver()
         {
+         
             IWebDriver driver = new ChromeDriver();
-            const string Url = "https://google.com/";
+            const string Url = @"http://localhost:5001/";
             driver.Navigate().GoToUrl(Url);
             driver.Manage().Window.Maximize();
             driver.Close();
             driver.Quit();
         }
+
+        [AssemblyInitialize]
+        public static void SetLogging()
+        {
+        log4net.ILog log =
+        log4net.LogManager.GetLogger
+        (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        }
+            
     }
 }
