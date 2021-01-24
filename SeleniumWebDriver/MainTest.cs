@@ -2,6 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using SeleniumWebDriver.Configuration;
+using SeleniumWebDriver.interfaces;
 
 namespace SeleniumWebDriver
 {
@@ -9,27 +11,18 @@ namespace SeleniumWebDriver
     [TestClass]
     public class MainTest
     {
-        static readonly log4net.ILog log;
+        
         [TestMethod]
         public void OpenWebDriver()
         {
-         
-            IWebDriver driver = new ChromeDriver();
-            const string Url = @"http://localhost:5001/";
-            driver.Navigate().GoToUrl(Url);
-            driver.Manage().Window.Maximize();
-            driver.Close();
-            driver.Quit();
-        }
-
-        [AssemblyInitialize]
-        public static void SetLogging()
-        {
-        log4net.ILog log =
-        log4net.LogManager.GetLogger
-        (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            IConfig config = new AppConfigReader();
+            Console.WriteLine("Browser:{0}", config.GetBrowser());
+            Console.WriteLine("User:{0}", config.GetUser());
+            Console.WriteLine("Password:{0}", config.GetPassword());
 
         }
-            
+
+
+
     }
 }
