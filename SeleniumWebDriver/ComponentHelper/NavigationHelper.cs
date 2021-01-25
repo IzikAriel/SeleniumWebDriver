@@ -13,7 +13,6 @@ namespace SeleniumWebDriver.ComponentHelper
         {
             ObjectRepository.Driver.Navigate().GoToUrl(url);
             string titleOfCurPage =  WindowsHelper.GetTitle();
-            Console.WriteLine("The Title is: {0}", titleOfCurPage);
         }
     }
 }
