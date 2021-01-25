@@ -15,10 +15,8 @@ namespace SeleniumWebDriver
         [TestMethod]
         public void OpenWebDriver()
         {
-            IConfig config = new AppConfigReader();
-            Console.WriteLine("Browser:{0}", config.GetBrowser());
-            Console.WriteLine("User:{0}", config.GetUser());
-            Console.WriteLine("Password:{0}", config.GetPassword());
+           
+            Console.WriteLine("Test1 ");
 
         }
 

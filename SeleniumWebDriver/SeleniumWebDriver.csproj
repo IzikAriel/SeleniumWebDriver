@@ -62,11 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\AppConfigReader.cs" />
+    <Compile Include="Configuration\BaseClass.cs" />
     <Compile Include="Configuration\BrowsersType.cs" />
+    <Compile Include="CustomException\NoSuitableDriverFound.cs" />
     <Compile Include="interfaces\IConfig.cs" />
     <Compile Include="MainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting\AppConfigKeys.cs" />
+    <Compile Include="Setting\ObjectRepository.cs" />
     <Compile Include="WebDriverFactory.cs" />
   </ItemGroup>
   <ItemGroup>
