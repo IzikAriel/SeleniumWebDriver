@@ -8,10 +8,9 @@ namespace SeleniumWebDriver.Setting
 {
     public class AppConfigKeys
     {
-
         public const string Browser = "BrowserType";
         public const string User = "User";
         public const string Password = "Pass";
-
+        public const string Website = "Website";
     }
 }

@@ -28,5 +28,11 @@ namespace SeleniumWebDriver.Configuration
             string user = ConfigurationManager.AppSettings.Get(AppConfigKeys.User);
             return user;
         }
+
+        public string GetWebsite()
+        {
+            string website = ConfigurationManager.AppSettings.Get(AppConfigKeys.Website);
+            return website;
+        }
     }
 }

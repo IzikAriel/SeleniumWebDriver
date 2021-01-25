@@ -13,5 +13,6 @@ namespace SeleniumWebDriver.interfaces
         BrowsersType GetBrowser();
         string GetUser();
         string GetPassword();
+        string GetWebsite();
     }
 }

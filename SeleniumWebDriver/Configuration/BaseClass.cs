@@ -32,6 +32,8 @@ namespace SeleniumWebDriver.Configuration
             IWebDriver driver = new InternetExplorerDriver();
             return driver;
         }
+
+
         [AssemblyInitialize]
         public static void InitWebDriver(TestContext tx)
         {
@@ -51,5 +53,18 @@ namespace SeleniumWebDriver.Configuration
                     throw new NoSuitableDriverFound( "Driver Not Found: " +  ObjectRepository.Config.GetBrowser().ToString() );
             }
         }
+
+        [AssemblyCleanup]
+        public static void TearDown()
+        {
+            if (ObjectRepository.Driver != null)
+            {
+                ObjectRepository.Driver.Close();
+                ObjectRepository.Driver.Quit();
+            }
+        }
+
+
+
     }
 }
