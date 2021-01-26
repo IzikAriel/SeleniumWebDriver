@@ -61,14 +61,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComponentHelper\CheckBoxHelper.cs" />
     <Compile Include="ComponentHelper\GenericHelper.cs" />
     <Compile Include="ComponentHelper\LinkHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
+    <Compile Include="ComponentHelper\TextBoxHelper.cs" />
     <Compile Include="ComponentHelper\WindowsHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Baseclasses\BaseClass.cs" />
     <Compile Include="Configuration\BrowsersType.cs" />
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
+    <Compile Include="TestScript\CheckBox\TestCheckBox.cs" />
     <Compile Include="TestScript\HyperLink\TestHyperLink.cs" />
     <Compile Include="interfaces\IConfig.cs" />
     <Compile Include="MainTest.cs" />

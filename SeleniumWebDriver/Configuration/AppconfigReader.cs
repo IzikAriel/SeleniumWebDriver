@@ -23,7 +23,7 @@ namespace SeleniumWebDriver.Configuration
             return password;
         }
 
-        public string GetUser()
+        public string GetUserName()
         {
             string user = ConfigurationManager.AppSettings.Get(AppConfigKeys.User);
             return user;
