@@ -66,6 +66,7 @@
     <Compile Include="ComponentHelper\GenericHelper.cs" />
     <Compile Include="ComponentHelper\LinkHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
+    <Compile Include="ComponentHelper\RadioButtonHelper.cs" />
     <Compile Include="ComponentHelper\TextBoxHelper.cs" />
     <Compile Include="ComponentHelper\WindowsHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Setting\AppConfigKeys.cs" />
     <Compile Include="Setting\ObjectRepository.cs" />
     <Compile Include="TestScript\PageNavigation\TestPageNavigator.cs" />
+    <Compile Include="TestScript\RadioButton\HandleRadioButton.cs" />
     <Compile Include="TestScript\TextBox\TestTextBox.cs" />
     <Compile Include="TestScript\WebElement\WebElementTest.cs" />
   </ItemGroup>

@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 
 namespace SeleniumWebDriver.ComponentHelper
 {
-    public class CheckBoxHelper
+    public class RadioButtonHelper
     {
         private static IWebElement Element;
 
-        public static void CheckedCheckBox(By locator)
+        public static void ClickOnRadioButton(By locator)
         {
-            Element = GenericHelper.GetElement(locator);
-            if(Element.GetAttribute("checked").Equals("false") )
-                Element.Click();
+            Element = GenericHelper.GetElement(locator);    
+            Element.Click();
         }
-        public static bool IsCheckBoxChecked(By locator)
+
+
+        public static bool IsRadioButtonSelected(By locator)
         {
             Element = GenericHelper.GetElement(locator);
             string flag = Element.GetAttribute("checked");
@@ -30,8 +31,9 @@ namespace SeleniumWebDriver.ComponentHelper
             {
                 return (flag.Equals("checked") || flag.Equals("true"));
             }
-                
+
         }
 
     }
 }
+
