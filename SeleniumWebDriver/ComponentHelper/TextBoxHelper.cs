@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,15 +13,18 @@ namespace SeleniumWebDriver.ComponentHelper
         public static void TypeinTextBox(By locator, string text)
         {
             Element = GenericHelper.GetElement(locator);
-            ClearTextBox(locator);
+            Element.Clear();
             Element.SendKeys(text);
 
 
         }
-        public static void ClearTextBox(By locator)
+        public static void ClearTextBox(ArrayList locators)
         {
-            Element = GenericHelper.GetElement(locator);
-            Element.Clear();
+            foreach (By loc in locators)
+            {
+                Element = GenericHelper.GetElement(loc);
+                Element.Clear();
+            }
         }
 
 

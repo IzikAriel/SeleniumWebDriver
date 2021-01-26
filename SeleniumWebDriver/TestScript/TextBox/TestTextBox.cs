@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using SeleniumWebDriver.ComponentHelper;
 using SeleniumWebDriver.Setting;
-
+using System.Collections;
 
 namespace SeleniumWebDriver.TestScript.TextBox
 {   
@@ -31,12 +31,10 @@ namespace SeleniumWebDriver.TestScript.TextBox
             string password = ObjectRepository.Config.GetPassword();
             TextBoxHelper.TypeinTextBox(passwordTextBox, password);
 
-            By checkBoxLocator = By.Id("Bugzilla_restrictlogin");
-            CheckBoxHelper.CheckedCheckBox(checkBoxLocator);
-            bool response = CheckBoxHelper.IsCheckBoxChecked(checkBoxLocator);
-            if (response == true)
-                Console.WriteLine("The checkBox is checked");
+            ArrayList locators = new ArrayList { userTextBox, passwordTextBox };
+            TextBoxHelper.ClearTextBox(locators);
 
+           
         }
     }
 }

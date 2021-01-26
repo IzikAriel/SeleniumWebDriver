@@ -14,7 +14,7 @@ namespace SeleniumWebDriver.ComponentHelper
         public static void CheckedCheckBox(By locator)
         {
             Element = GenericHelper.GetElement(locator);
-            if(Element.GetAttribute("checked").Equals("false"))
+            if(Element.GetAttribute("checked").Equals("false") )
                 Element.Click();
         }
         public static bool IsCheckBoxChecked(By locator)
