@@ -61,18 +61,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComponentHelper\GenericHelper.cs" />
+    <Compile Include="ComponentHelper\LinkHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
     <Compile Include="ComponentHelper\WindowsHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
-    <Compile Include="Configuration\BaseClass.cs" />
+    <Compile Include="Baseclasses\BaseClass.cs" />
     <Compile Include="Configuration\BrowsersType.cs" />
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
+    <Compile Include="TestScript\HyperLink\TestHyperLink.cs" />
     <Compile Include="interfaces\IConfig.cs" />
     <Compile Include="MainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting\AppConfigKeys.cs" />
     <Compile Include="Setting\ObjectRepository.cs" />
     <Compile Include="TestScript\PageNavigation\TestPageNavigator.cs" />
+    <Compile Include="TestScript\TextBox\TestTextBox.cs" />
     <Compile Include="TestScript\WebElement\WebElementTest.cs" />
   </ItemGroup>
   <ItemGroup>
