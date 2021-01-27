@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="ComponentHelper\ButtonHelper.cs" />
     <Compile Include="ComponentHelper\CheckBoxHelper.cs" />
+    <Compile Include="ComponentHelper\DropDownHelper.cs" />
     <Compile Include="ComponentHelper\GenericHelper.cs" />
     <Compile Include="ComponentHelper\LinkHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
     <Compile Include="TestScript\Button\TestButton.cs" />
     <Compile Include="TestScript\CheckBox\TestCheckBox.cs" />
+    <Compile Include="TestScript\HandleDropDown\DropDownList.cs" />
     <Compile Include="TestScript\HyperLink\TestHyperLink.cs" />
     <Compile Include="interfaces\IConfig.cs" />
     <Compile Include="MainTest.cs" />
