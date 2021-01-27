@@ -13,7 +13,8 @@ namespace SeleniumWebDriver.TestScript.RadioButton
 
     [TestClass]
     public class HandleRadioButton
-    {
+    {   
+        [TestMethod]
         public void TestRadio()
         {
             string url = ObjectRepository.Config.GetWebsite();
@@ -34,8 +35,14 @@ namespace SeleniumWebDriver.TestScript.RadioButton
             LinkHelper.ClickLink(By.XPath("//div[1]/ul[1]/li[9]/a"));
             LinkHelper.ClickLink(By.XPath("//div[2]/table/tbody/tr/td[1]/dl/dt[1]/a"));
 
-            By RadioButtonLocator = By.Id("ssl_redirect-on");
-            IWebElement RadioButtonElement = GenericHelper.GetElement(RadioButtonLocator);
+            By RadioButtonOnLocator = By.Id("ssl_redirect-on");
+            By RadioButtonOffLocator = By.Id("ssl_redirect-off");
+
+            bool off = RadioButtonHelper.IsRadioButtonSelected(RadioButtonOffLocator);
+            if(off)
+            {
+                RadioButtonHelper.ClickOnRadioButton(RadioButtonOnLocator);
+            }
 
 
 

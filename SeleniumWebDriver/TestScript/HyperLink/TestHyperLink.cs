@@ -19,7 +19,7 @@ namespace SeleniumWebDriver.HyperLink
         {
             NavigationHelper.NavigateToUrl(ObjectRepository.Config.GetWebsite());
             LinkHelper.ClickLink(By.LinkText("File a Bug"));
-            LinkHelper.ClickLink(By.PartialLinkText("File"));
+           
         }
     }
 }
