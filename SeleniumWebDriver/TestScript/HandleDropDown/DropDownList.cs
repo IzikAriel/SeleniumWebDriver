@@ -35,6 +35,8 @@ namespace SeleniumWebDriver.TestScript.HandleDropDown
             DropDownHelper.SelectElementByIndex(listLoactor, 2);
             DropDownHelper.SelectElementByValue(listLoactor, "blocker");
             DropDownHelper.PrintAllElements(listLoactor);
+
+            GenericHelper.ScreenShot();
         }
     }
 }
