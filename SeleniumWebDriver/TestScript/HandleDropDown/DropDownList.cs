@@ -8,14 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeleniumWebDriver.TestScript.RadioButton
-{    
-
+namespace SeleniumWebDriver.TestScript.HandleDropDown
+{   
     [TestClass]
-    public class HandleRadioButton
-    {   
+    public class DropDownList
+    {
         [TestMethod]
-        public void TestRadio()
+        public void DropDown()
         {
             string url = ObjectRepository.Config.GetWebsite();
             NavigationHelper.NavigateToUrl(url);
@@ -32,21 +31,12 @@ namespace SeleniumWebDriver.TestScript.RadioButton
             By loggingButton = By.Id("log_in");
             ButtonHelper.ClickButton(loggingButton);
 
-            LinkHelper.ClickLink(By.XPath("//div[1]/ul[1]/li[9]/a"));
-            LinkHelper.ClickLink(By.XPath("//div[2]/table/tbody/tr/td[1]/dl/dt[1]/a"));
+            By listLoactor = By.Id("bug_severity");
+            DropDownHelper.SelectElementByIndex(listLoactor, 2);
+            DropDownHelper.SelectElementByValue(listLoactor, "blocker");
+            DropDownHelper.PrintAllElements(listLoactor);
 
-            By RadioButtonOnLocator = By.Id("ssl_redirect-on");
-            By RadioButtonOffLocator = By.Id("ssl_redirect-off");
-
-            bool off = RadioButtonHelper.IsRadioButtonSelected(RadioButtonOffLocator);
-            if(off)
-            {
-                RadioButtonHelper.ClickOnRadioButton(RadioButtonOnLocator);
-            }
-
-
-
+            GenericHelper.ScreenShot();
         }
-
     }
 }

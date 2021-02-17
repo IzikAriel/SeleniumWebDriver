@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SeleniumWebDriver.Setting;
+using OpenQA.Selenium.Support.Extensions;
 
 namespace SeleniumWebDriver.ComponentHelper
 {
@@ -36,8 +37,16 @@ namespace SeleniumWebDriver.ComponentHelper
 
         }
 
+        public static void ScreenShot(string fileName = "ScreenShoot")
+        {
+           // string dir = "..//ScreenShoots//";
+            Screenshot screenshot = ObjectRepository.Driver.TakeScreenshot();
+            if (fileName.Equals(fileName))
+            {
+                fileName = fileName + DateTime.Now.ToString("yyyy--MM-dd--mm--ss") + ".jpeg";
+            }
+            screenshot.SaveAsFile("ScreenShoots//"+fileName, ScreenshotImageFormat.Jpeg);
 
-
-
+        }
     }
 }
