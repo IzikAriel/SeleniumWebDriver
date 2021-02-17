@@ -74,6 +74,7 @@
     <Compile Include="Baseclasses\BaseClass.cs" />
     <Compile Include="Configuration\BrowsersType.cs" />
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
+    <Compile Include="T.cs" />
     <Compile Include="TestScript\Button\TestButton.cs" />
     <Compile Include="TestScript\CheckBox\TestCheckBox.cs" />
     <Compile Include="TestScript\HandleDropDown\DropDownList.cs" />
@@ -92,6 +93,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
